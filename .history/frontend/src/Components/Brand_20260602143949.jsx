@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -10,7 +9,7 @@ export default function Brand() {
 
     useEffect(() => {
         (() => dispatch(getBrand()))()
-    }, [BrandStateData.length])
+    }, [BrandStateData.length, dispatch])
 
     return (
         <section className="product-category my-5">
